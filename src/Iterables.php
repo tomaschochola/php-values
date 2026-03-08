@@ -16,6 +16,7 @@ declare(strict_types=1);
 namespace TomasChochola\Splx;
 
 use ArrayIterator;
+use Generator;
 use Iterator;
 use IteratorAggregate;
 use IteratorIterator;
@@ -25,23 +26,10 @@ use Traversable;
 use function is_array;
 
 /**
- * @template TKey
- * @template TValue
- *
- * @extends IteratorIterator<TKey, TValue, Iterator<TKey, TValue>>
- *
  * @no-named-arguments
  */
-class IterableIterator extends IteratorIterator
+final class Iterables
 {
-    /**
-     * @param iterable<TKey, TValue> $iterable
-     */
-    public function __construct(iterable $iterable)
-    {
-        parent::__construct(static::iterator($iterable));
-    }
-
     /**
      * @template TK
      * @template TV
@@ -58,14 +46,7 @@ class IterableIterator extends IteratorIterator
         }
 
         if ($iterable instanceof IteratorAggregate) {
-            $iterator = $iterable->getIterator();
-
-            if ($iterator instanceof Iterator) {
-                return $iterator;
-            }
-
-            /** @phpstan-ignore-next-line return.type */
-            return new IteratorIterator($iterator);
+            return static::iterator($iterable->getIterator());
         }
 
         if (is_array($iterable)) {
@@ -93,5 +74,21 @@ class IterableIterator extends IteratorIterator
 
         /** @phpstan-ignore-next-line return.type */
         return new ArrayIterator($iterable);
+    }
+
+    /**
+     * @template TK
+     * @template TV
+     *
+     * @param iterable<TK, TV> ...$iterables
+     *
+     * @return Generator<TK, TV>
+     */
+    #[NoDiscard]
+    public static function concat(iterable ...$iterables): Generator
+    {
+        foreach ($iterables as $iterable) {
+            yield from $iterable;
+        }
     }
 }
