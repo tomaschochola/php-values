@@ -28,7 +28,7 @@ use function is_array;
 /**
  * @no-named-arguments
  */
-final class Iterables
+class Iterables
 {
     /**
      * @template TK
