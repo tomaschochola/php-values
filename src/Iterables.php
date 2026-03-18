@@ -62,12 +62,12 @@ class Iterables
         }
 
         if ($iterable instanceof IteratorAggregate) {
-            /** @phpstan-ignore-next-line return.type */
+            // @phpstan-ignore-next-line return.type
             return static::iterator($iterable->getIterator());
         }
 
         if (is_array($iterable)) {
-            /** @phpstan-ignore-next-line return.type */
+            // @phpstan-ignore-next-line return.type
             return new ArrayIterator($iterable);
         }
 
@@ -89,7 +89,7 @@ class Iterables
             return $iterable;
         }
 
-        /** @phpstan-ignore-next-line return.type */
+        // @phpstan-ignore-next-line return.type
         return new ArrayIterator($iterable);
     }
 }
