@@ -34,6 +34,22 @@ class Iterables
      * @template TK
      * @template TV
      *
+     * @param iterable<TK, TV> ...$iterables
+     *
+     * @return Generator<TK, TV>
+     */
+    #[NoDiscard]
+    public static function concat(iterable ...$iterables): Generator
+    {
+        foreach ($iterables as $iterable) {
+            yield from $iterable;
+        }
+    }
+
+    /**
+     * @template TK
+     * @template TV
+     *
      * @param iterable<TK, TV> $iterable
      *
      * @return Iterator<TK, TV>
@@ -46,6 +62,7 @@ class Iterables
         }
 
         if ($iterable instanceof IteratorAggregate) {
+            /** @phpstan-ignore-next-line return.type */
             return static::iterator($iterable->getIterator());
         }
 
@@ -74,21 +91,5 @@ class Iterables
 
         /** @phpstan-ignore-next-line return.type */
         return new ArrayIterator($iterable);
-    }
-
-    /**
-     * @template TK
-     * @template TV
-     *
-     * @param iterable<TK, TV> ...$iterables
-     *
-     * @return Generator<TK, TV>
-     */
-    #[NoDiscard]
-    public static function concat(iterable ...$iterables): Generator
-    {
-        foreach ($iterables as $iterable) {
-            yield from $iterable;
-        }
     }
 }
