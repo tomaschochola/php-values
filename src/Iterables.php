@@ -13,7 +13,7 @@
 
 declare(strict_types=1);
 
-namespace TomasChochola\Splx;
+namespace TomasChochola\Iterables;
 
 use ArrayIterator;
 use Generator;

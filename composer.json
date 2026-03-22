@@ -9,7 +9,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "TomasChochola\\Splx\\": "./src"
+      "TomasChochola\\Iterables\\": "./src"
     }
   },
   "autoload-dev": {
@@ -26,24 +26,24 @@
     "process-timeout": 0,
     "sort-packages": true
   },
-  "description": "tomaschochola/php-splx",
+  "description": "tomaschochola/php-iterables",
   "funding": [
     {
       "type": "github",
       "url": "https://github.com/sponsors/tomaschochola"
     }
   ],
-  "homepage": "https://github.com/tomaschochola/php-splx",
+  "homepage": "https://github.com/tomaschochola/php-iterables",
   "keywords": [
     "tomaschochola",
     "TomasChochola",
     "Tomas Chochola",
     "Tomáš Chochola",
-    "php-splx"
+    "php-iterables"
   ],
   "license": "CC-BY-ND-4.0",
   "minimum-stability": "dev",
-  "name": "tomaschochola/php-splx",
+  "name": "tomaschochola/php-iterables",
   "prefer-stable": true,
   "readme": "./README.md",
   "repositories": [
@@ -72,10 +72,10 @@
     "tomaschochola/php-tooling-phpstan-config": "^1.0@dev"
   },
   "support": {
-    "docs": "https://github.com/tomaschochola/php-splx",
+    "docs": "https://github.com/tomaschochola/php-iterables",
     "email": "tomaschochola@tomaschochola.cz",
-    "issues": "https://github.com/tomaschochola/php-splx/issues",
-    "source": "https://github.com/tomaschochola/php-splx.git"
+    "issues": "https://github.com/tomaschochola/php-iterables/issues",
+    "source": "https://github.com/tomaschochola/php-iterables.git"
   },
   "type": "library"
 }
