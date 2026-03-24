@@ -15,15 +15,10 @@ declare(strict_types=1);
 
 namespace TomasChochola\Values;
 
-use ArrayIterator;
 use Generator;
 use Iterator;
-use IteratorAggregate;
-use IteratorIterator;
 use NoDiscard;
 use Traversable;
-
-use function is_array;
 
 /**
  * @no-named-arguments
