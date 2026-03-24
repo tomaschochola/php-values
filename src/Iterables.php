@@ -13,7 +13,7 @@
 
 declare(strict_types=1);
 
-namespace TomasChochola\Iterables;
+namespace TomasChochola\Values;
 
 use ArrayIterator;
 use Generator;
@@ -57,21 +57,7 @@ class Iterables
     #[NoDiscard]
     public static function iterator(iterable $iterable): Iterator
     {
-        if ($iterable instanceof Iterator) {
-            return $iterable;
-        }
-
-        if ($iterable instanceof IteratorAggregate) {
-            // @phpstan-ignore-next-line return.type
-            return static::iterator($iterable->getIterator());
-        }
-
-        if (is_array($iterable)) {
-            // @phpstan-ignore-next-line return.type
-            return new ArrayIterator($iterable);
-        }
-
-        return new IteratorIterator($iterable);
+        yield from $iterable;
     }
 
     /**
@@ -85,11 +71,6 @@ class Iterables
     #[NoDiscard]
     public static function traversable(iterable $iterable): Traversable
     {
-        if ($iterable instanceof Traversable) {
-            return $iterable;
-        }
-
-        // @phpstan-ignore-next-line return.type
-        return new ArrayIterator($iterable);
+        yield from $iterable;
     }
 }

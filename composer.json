@@ -9,7 +9,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "TomasChochola\\Iterables\\": "./src"
+      "TomasChochola\\Values\\": "./src"
     }
   },
   "autoload-dev": {
@@ -26,24 +26,24 @@
     "process-timeout": 0,
     "sort-packages": true
   },
-  "description": "tomaschochola/php-iterables",
+  "description": "tomaschochola/php-values",
   "funding": [
     {
       "type": "github",
       "url": "https://github.com/sponsors/tomaschochola"
     }
   ],
-  "homepage": "https://github.com/tomaschochola/php-iterables",
+  "homepage": "https://github.com/tomaschochola/php-values",
   "keywords": [
     "tomaschochola",
     "TomasChochola",
     "Tomas Chochola",
     "Tomáš Chochola",
-    "php-iterables"
+    "php-values"
   ],
   "license": "CC-BY-ND-4.0",
   "minimum-stability": "dev",
-  "name": "tomaschochola/php-iterables",
+  "name": "tomaschochola/php-values",
   "prefer-stable": true,
   "readme": "./README.md",
   "repositories": [
@@ -72,10 +72,10 @@
     "tomaschochola/php-tooling-phpstan-config": "^1.0@dev"
   },
   "support": {
-    "docs": "https://github.com/tomaschochola/php-iterables",
+    "docs": "https://github.com/tomaschochola/php-values",
     "email": "tomaschochola@tomaschochola.cz",
-    "issues": "https://github.com/tomaschochola/php-iterables/issues",
-    "source": "https://github.com/tomaschochola/php-iterables.git"
+    "issues": "https://github.com/tomaschochola/php-values/issues",
+    "source": "https://github.com/tomaschochola/php-values.git"
   },
   "type": "library"
 }

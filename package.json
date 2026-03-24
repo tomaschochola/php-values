@@ -6,7 +6,7 @@
   },
   "bugs": {
     "email": "tomaschochola@tomaschochola.cz",
-    "url": "https://github.com/tomaschochola/php-iterables/issues"
+    "url": "https://github.com/tomaschochola/php-values/issues"
   },
   "contributors": [
     {
@@ -15,7 +15,7 @@
       "url": "https://github.com/tomaschochola"
     }
   ],
-  "description": "@tomaschochola/php-iterables",
+  "description": "@tomaschochola/php-values",
   "devDependencies": {
     "@tomaschochola/ts-tooling-eslint-config": "github:tomaschochola/ts-tooling-eslint-config#1.x",
     "@tomaschochola/ts-tooling-prettier-config": "github:tomaschochola/ts-tooling-prettier-config#1.x"
@@ -24,17 +24,17 @@
     "type": "github",
     "url": "https://github.com/sponsors/tomaschochola"
   },
-  "homepage": "https://github.com/tomaschochola/php-iterables",
+  "homepage": "https://github.com/tomaschochola/php-values",
   "keywords": [
     "tomaschochola",
     "TomasChochola",
     "Tomas Chochola",
     "Tomáš Chochola",
-    "php-iterables"
+    "php-values"
   ],
   "license": "CC-BY-ND-4.0",
-  "name": "@tomaschochola/php-iterables",
-  "repository": "github:tomaschochola/php-iterables",
+  "name": "@tomaschochola/php-values",
+  "repository": "github:tomaschochola/php-values",
   "sideEffects": false,
   "type": "module",
   "dependencies": {
