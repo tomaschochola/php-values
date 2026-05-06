@@ -36,10 +36,5 @@
   "name": "@tomaschochola/php-values",
   "repository": "github:tomaschochola/php-values",
   "sideEffects": false,
-  "type": "module",
-  "dependencies": {
-    "0": "^0.0.0",
-    "5": "^0.0.1",
-    "never": "^1.1.0"
-  }
+  "type": "module"
 }
