@@ -33,7 +33,7 @@ class Iterables
      *
      * @return Generator<TK, TV>
      */
-    #[NoDiscard]
+    #[NoDiscard()]
     public static function concat(iterable ...$iterables): Generator
     {
         foreach ($iterables as $iterable) {
@@ -49,7 +49,7 @@ class Iterables
      *
      * @return Iterator<TK, TV>
      */
-    #[NoDiscard]
+    #[NoDiscard()]
     public static function iterator(iterable $iterable): Iterator
     {
         yield from $iterable;
@@ -63,7 +63,7 @@ class Iterables
      *
      * @return Traversable<TK, TV>
      */
-    #[NoDiscard]
+    #[NoDiscard()]
     public static function traversable(iterable $iterable): Traversable
     {
         yield from $iterable;
