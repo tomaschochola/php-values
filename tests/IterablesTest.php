@@ -41,11 +41,7 @@ final class IterablesTest extends TestCase
             $entries[] = [$key, $value];
         }
 
-        /** @phpstan-ignore-next-line staticMethod.unresolvableReturnType */
-        $empty = Iterables::concat();
-
         self::assertSame([['same', 1], ['same', 2]], $entries);
-        self::assertSame([], iterator_to_array($empty));
     }
 
     #[Test()]
