@@ -49,9 +49,7 @@
         "TomasChochola",
         "Tomas Chochola",
         "Tomáš Chochola",
-        "iterable",
-        "php",
-        "values"
+        "php-values"
     ],
     "license": "CC-BY-ND-4.0",
     "name": "tomaschochola/php-values",
